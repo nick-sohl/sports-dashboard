@@ -12,6 +12,10 @@ Route::get('/dashboard', function () {
     return view('welcome-dashboard');
 });
 
+Route::get('/settings', function () {
+    return view('settings');
+});
+
 Route::get('/register', [RegisterUserController::class, 'create']);
 Route::post('/register', [RegisterUserController::class, 'store']);
 

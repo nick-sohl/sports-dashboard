@@ -8,7 +8,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Sportify - Dashboard</title>
 </head>
-<body class="h-screen">
+<body class="h-screen" x-data="{ sidebarOpen: false }">
+    <x-sidebar.mobile />
+    <x-sidebar.desktop />
+    <x-topbar.layout />
     <main class="h-full">
         {{ $slot }}
     </main>
